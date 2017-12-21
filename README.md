@@ -22,7 +22,7 @@ Game play:
 8. After a matching of two players is done the system enable the game app to send messages from one user to the other.
 9. Exchanging the messages between the game apps is performed in P2P using UDP protocol.
 10. The game app can end the game and declare its result: user 1 won, user 2 won, draw, game cancelled. And the score for each user: for example winner: user 1, score 1: 20, score 2: 10
-11.After the game a user is able to see the scoreboard and his position in it. The scoreboard is ordered the users according to their
+11. After the game a user is able to see the scoreboard and his position in it. The scoreboard is ordered the users according to their
 
 Non functionality:
 1. The system is a hybrid P2P system with central directory.
