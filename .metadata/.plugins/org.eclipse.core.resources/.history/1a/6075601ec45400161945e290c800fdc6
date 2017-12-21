@@ -1,0 +1,69 @@
+
+
+#include "PartnerLink.h"
+
+PartnerLink::PartnerLink(int _port)
+{
+	socket = new UDPSocket(_port);
+	this->port = _port;
+	running = true;
+	this->start();
+}
+
+
+
+void PartnerLink::run()
+{
+	buff = (char*)calloc(100 , sizeof(char));
+	int num;
+	while(running)
+	{
+		buff = (char*)calloc(100 , sizeof(char));
+
+		if(socket->recv(buff , 100)< 0)
+		{
+			cout<<"could not receive message"<<endl;
+		}
+		else
+		{
+			cout<<buff<<endl;
+		}
+
+		delete[] buff;
+
+
+	}
+}
+
+void PartnerLink::sendTo(string msg,string ip,int port)
+{
+	int num;
+
+	num = socket->sendTo(msg,ip,port);
+	if(num < 0)
+	{
+		cout<<"Message could not be sent"<<endl;
+	}
+
+}
+
+void PartnerLink::reply(string msg)
+{
+	if(socket->reply(msg) < 0)
+	{
+		cout<< "Message could not be reply"<<endl;
+	}
+}
+
+void PartnerLink::close()
+{
+	this->~MThread();
+	socket->cclose();
+	this->waitForThread();
+	free(buff);
+}
+
+PartnerLink::~PartnerLink() {
+	close();
+}
+

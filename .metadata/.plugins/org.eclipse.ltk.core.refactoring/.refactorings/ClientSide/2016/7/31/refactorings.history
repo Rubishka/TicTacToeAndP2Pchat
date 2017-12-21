@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;ClientSide/src/PartnerLink.cpp&apos; to &apos;Peer2Peer.cpp&apos;" description="Rename resource &apos;PartnerLink.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/PartnerLink.cpp" name="Peer2Peer.cpp" stamp="1469711139127" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;ClientSide/src/PartnerLink.h&apos; to &apos;Peer2Peer.h&apos;" description="Rename resource &apos;PartnerLink.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/PartnerLink.h" name="Peer2Peer.h" stamp="1469711150363" updateReferences="true"/>
+</session>

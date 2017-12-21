@@ -1,0 +1,6 @@
+12:13:00 **** Incremental Build of configuration Debug for project ServerSide ****
+make all 
+make: Nothing to be done for `all'.
+
+12:13:00 Build Finished (took 76ms)
+

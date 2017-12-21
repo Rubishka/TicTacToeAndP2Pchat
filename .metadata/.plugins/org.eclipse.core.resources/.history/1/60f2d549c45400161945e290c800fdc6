@@ -1,0 +1,23 @@
+
+#ifndef PARTNERLINK_H_
+#define PARTNERLINK_H_
+
+#include "Common.h"
+
+class PartnerLink: public MThread {
+public:
+	UDPSocket* socket;
+	int port;
+	char* buff;
+	bool running;
+
+	PartnerLink(int port);
+
+	void run();
+	void sendTo(string msg,string ip,int port);
+	void reply(string msg);
+	void close();
+	virtual ~PartnerLink();
+};
+
+#endif /* PARTNERLINK_H_ */
